@@ -1,5 +1,5 @@
-账户:yangxing20107@gmail.com
-密码：adsh2016
+账户:qdsh2016
+密码：qdsh2016
 
 
 01.安装git:
