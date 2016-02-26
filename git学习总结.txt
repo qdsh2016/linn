@@ -107,3 +107,12 @@
 		$ git config --global alias.br branch	
 	e.配置文件位置
 		.git/config
+25.配置push到远程库中无需输入密码
+	a.将.git-credential放入User/yx文件夹中(即windows下个人主目录//Linux下是/home吧)
+	b.在 User/yx文件夹 中打开Git Bash命令行
+	c.输入命令"git config --global credential.helper store"
+	d.重启git gui即可
+	e.".git-credential"文件内容如下：
+		https://qdsh2016:qdsh2016@github.com
+
+	
