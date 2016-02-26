@@ -114,5 +114,7 @@
 	d.重启git gui即可
 	e.".git-credential"文件内容如下：
 		https://qdsh2016:qdsh2016@github.com
+		
+26. GUI里面，fetch + merge == pull [gui里无pull选项, 可敲pull命令："git pull origin master"]
 
 	
