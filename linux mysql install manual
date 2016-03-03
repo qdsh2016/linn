@@ -1,0 +1,12 @@
+Linux安装mysql：
+1. 安装mysql 服务端
+	sudo apt-get install mysql-server 
+2. 安装mysql客户端
+	apt-get isntall mysql-client 
+3. 安装mysql库文件
+	sudo apt-get install libmysqlclient-dev
+4.检查是否安装成功：
+ 	sudo netstat -tap | grep mysql
+  若看到有mysql 的socket处于 listen 状态则表示安装成功。
+5.登陆mysql数据库可以通过如下命令：
+	mysql -u 用户名 -p 
