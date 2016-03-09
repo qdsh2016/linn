@@ -1,0 +1,88 @@
+1.JSON是什么
+	JSON，全称是 JavaScript Object Notation，即JavaScript对象标记法。
+	JSON是一种轻量级（Light-Weight）、基于文本的（Text-Based）、可读的（Human-Readable）格式。
+	JSON的中文名中虽然带有JavaScript，但这是指其语法规则参考JavaScript对象的，而不是指用于JavaScript语言。
+	JSON无论对于人，还是对于机器来说，都是十分便于阅读和书写的，而且相比XML（另一种常见的数据交换格式），文件更小，因此迅速成为网络上十分流行的交换格式。
+	近年来JavaScript已经成为浏览器上事实上的标准语言，JavaScript的风靡，与JSON的流行也有密切的关系。
+	因为JSON本身就是参考JavaScript对象的规则定义的，其语法与JavaScript定义对象的语法几乎完全相同。
+	JSON，全称是SON格式的创始人声称此格式永远不升级，这就表示这种格式具有较长时间的稳定性。
+
+2.	JSON的语法规则
+	-	数组（Array）用方括号[]表示。
+	-	对象（Object）用大括号{}表示。
+	-	名称/值对(name/value)组合成数组对象。
+	-	并列的数据之间用逗号，分割。
+	比如，
+	{
+		"name":	"Make"
+		"age":	26
+	}
+
+3.JSON 和 XML相比
+	-	没有结束标签，长度更短，读写更快
+	-	能直接被JavaScript解释器解析
+	-	可以使用数组，而XML使用数组是非常麻烦的
+
+	JSON：
+		{
+			"name":	"Mike"
+			"age"：	26
+			"friends":	["Lily","Lucy","Gwen"]
+		}
+
+	XML:
+		<root>
+			<name>Mike</name>
+			<age>26</age>
+			<friends>Lily</friends>
+			<friends>Lucy</friends>
+			<friends>Gwen</friends>
+		</root>
+
+4.JSON解析和生成方法
+	-	JSON.parse
+	-	JSON.stringify
+	例如：
+	<script>
+		var str = '{"name": "Mike","age":26}';
+		var obj = JSON.parse(str)
+
+		console.log(obj)
+
+		var jsonstr = JSON.stringify(obj);
+
+		console.log(jsonstr);
+	</script>
+
+5.JSON的五点语法：
+	-	数组（Array）用方括号[]表示
+	-	对象（Object）用大括号{}表示
+	-	名称/值对(name/value)之间用冒号：隔开
+	-	名称(name)置于双引号""中，值(value)有字符串、数值、布尔、空值、对象和数组
+	-	并列的数据之间用逗号，分割
+
+6.对象（Object）
+	对象用大括号{}括起来，大括号是一系列的"名称/值对"
+	两个并列的数据之间用逗号隔开，注意是英文逗号,不是中文逗号，
+	最后一个"名称/值对"之后不要加逗号
+
+7.数组(Array)
+	数组表示一系列有序的值，用方括号[]包围起来，并列的值之间用逗号分隔
+
+8.名称/值对(name/value)
+	名称是一个字符串，要用双引号括起来，不能用单引号，也不能没有引号，这点与JavaScript不同
+	值得类型只有七种：字符串(string)、数值(number)、对象(object)、数组(array)、布尔(true、false)、空值(null)，没有undefined、函数等
+	字符串规则：
+		-	英文双引号括起来，不能用单引号，也不能没有
+		-	字符串中不能单独出现双引号""和右斜杠\
+		-	若要打双引号或右斜杠，需要使用转义字符
+
+9.解析：是指将符合JSON语法规则的字符串转换成对象的过程。不同的变成语言都提供了解析JSON字符串的方法，其中，JavaScript的解析方法有三种：
+	-	eval()
+	-	JSON.parse()
+	-	第三方库，如JQuery
+
+10.eval()
+	eval()函数的参数是一个字符串，其作用是直接执行其中的JavaScript代码
+	eval()能够解析JSON字符串。可以看出，JSON和JavaScript是高度嵌合的
+	但目前很少使用eval来解析，除非浏览器的版本很旧，原因是eval()是一个相对危险的函数，因为字符串中可能含有未知因素。
