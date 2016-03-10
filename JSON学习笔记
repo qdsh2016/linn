@@ -86,3 +86,10 @@
 	eval()函数的参数是一个字符串，其作用是直接执行其中的JavaScript代码
 	eval()能够解析JSON字符串。可以看出，JSON和JavaScript是高度嵌合的
 	但目前很少使用eval来解析，除非浏览器的版本很旧，原因是eval()是一个相对危险的函数，因为字符串中可能含有未知因素。
+	
+11.JS中新建一个json就是 js的对象：
+	var f=function(){alert('for js test') };
+	var a={'id':23,'test':f};
+	//此时，a对象有了 id/test 2个属性,且test是个函数,
+	a.id;
+	a.test();  //变量,函数均可调用     
