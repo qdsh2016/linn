@@ -1,7 +1,7 @@
 账户:qdsh2016
 密码：qdsh2016
 
-
+=======================================>>>> git的重点区别就是 (master + dev) branch（分支）的概念和使用
 01.安装git:
 	sudo apt-get install git
 02.配置用户名和邮箱：
